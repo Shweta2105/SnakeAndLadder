@@ -4,7 +4,7 @@ public class snakeAndLadder {
 	public static void main(String[] args) {
 		int player;
 		int position = 0;
-
+		int diceroll = 0;
 		
 		
 		while (position < 100) {
@@ -17,6 +17,10 @@ public class snakeAndLadder {
 			case 1:
 				position = position + dice;
 				System.out.println("Current position is ladder :" + position);
+				if(position >100) {
+					position = position - dice;
+				}
+				diceroll++;
 				break;
 
 			case 2:
@@ -27,14 +31,17 @@ public class snakeAndLadder {
 				} else if (position < dice) {
 					position = 0;
 				}
+				diceroll++;
 				break;
 			default:
 				position = position;
 				System.out.println("Current position is  :" + position);
+				diceroll++;
 			}
 			System.out.println(+option);
 			System.out.println(+dice);
 		}
+	System.out.println("no. of times dice rolled :" +diceroll);
 	}
 
 }
