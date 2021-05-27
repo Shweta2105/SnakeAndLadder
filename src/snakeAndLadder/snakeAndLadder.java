@@ -5,7 +5,9 @@ public class snakeAndLadder {
 		int player;
 		int position = 0;
 		
-		System.out.println("is at position :"+position);
+		int dice = (1 + (int)(Math.random() * 6));
+		
+		System.out.println(dice);
 		
 	}
 
